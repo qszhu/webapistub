@@ -1,0 +1,223 @@
+{
+  "EventTarget": {
+    "hasConstructor": true,
+    "methods": [
+      "addEventListener",
+      "removeEventListener",
+      "dispatchEvent"
+    ]
+  },
+  "Node": {
+    "extends": "EventTarget",
+    "readonlyProperties": [
+      "baseURI",
+      "childNodes",
+      "firstChild",
+      "isConnected",
+      "lastChild",
+      "nextSibling",
+      "nodeName",
+      "nodeType",
+      "ownerDocument",
+      "parentNode",
+      "parentElement",
+      "previousSibling"
+    ],
+    "properties": [
+      "nodeValue",
+      "textContent"
+    ],
+    "methods": [
+      "appendChild",
+      "cloneNode",
+      "compareDocumentPosition",
+      "contains",
+      "getRootNode",
+      "hasChildNodes",
+      "insertBefore",
+      "isDefaultNamespace",
+      "isEqualNode",
+      "isSameNode",
+      "lookupPrefix",
+      "lookupNamespaceURI",
+      "normalize",
+      "removeChild",
+      "replaceChild"
+    ]
+  },
+  "Element": {
+    "extends": "Node",
+    "readonlyProperties": [
+      "attributes",
+      "classList",
+      "clientHeight",
+      "clientLeft",
+      "clientTop",
+      "clientWidth",
+      "localName",
+      "namespaceURI",
+      "nextElementSibling",
+      "prefix",
+      "previousElementSibling",
+      "scrollHeight",
+      "scrollWidth",
+      "shadowRoot",
+      "tagName"
+    ],
+    "properties": [
+      "className",
+      "id",
+      "innerHTML",
+      "scrollLeft",
+      "scrollTop"
+    ],
+    "methods": [
+      "attachShadow",
+      "getAttribute",
+      "getAttributeNames",
+      "getAttributeNS",
+      "getBoundingClientRect",
+      "getClientRects",
+      "getElementsByClassName",
+      "getElementsByTagName",
+      "getElementsByTagNameNS",
+      "hasAttribute",
+      "hasAttributeNS",
+      "hasAttributes",
+      "hasPointerCapture",
+      "insertAdjacentElement",
+      "insertAdjacentHTML",
+      "insertAdjacentText",
+      "querySelector",
+      "querySelectorAll",
+      "releasePointerCapture",
+      "removeAttribute",
+      "removeAttributeNS",
+      "scroll",
+      "scrollBy",
+      "scrollTo",
+      "setAttribute",
+      "setAttributeNS",
+      "setPointerCapture",
+      "toggleAttribute"
+    ],
+    "events": [
+      "cancel",
+      "error",
+      "scroll",
+      "select",
+      "show",
+      "wheel",
+      "copy",
+      "cut",
+      "paste",
+      "compositionend",
+      "compositionstart",
+      "compositionupdate",
+      "blur",
+      "focus",
+      "focusin",
+      "focusout",
+      "keydown",
+      "keypress",
+      "keyup",
+      "auxclick",
+      "click",
+      "contextmenu",
+      "dblclick",
+      "mousedown",
+      "mouseenter",
+      "mouseleave",
+      "mousemove",
+      "mouseout",
+      "mouseover",
+      "mouseup",
+      "touchcancel",
+      "touchend",
+      "touchmove",
+      "touchstart",
+      "fullscreenchange",
+      "fullscreennnerror"
+    ]
+  },
+  "HTMLElement": {
+    "extends": "Element",
+    "readonlyProperties": [
+      "accessKeyLabel",
+      "isContentEditable",
+      "dataset",
+      "dropzone"
+    ],
+    "properties": [
+      "accessKey",
+      "contentEditable",
+      "dir",
+      "draggable",
+      "hidden",
+      "inert",
+      "innerText",
+      "lang",
+      "noModule",
+      "nonce",
+      "spellcheck",
+      "style",
+      "tabIndex",
+      "title"
+    ],
+    "methods": [
+      "blur",
+      "click",
+      "focus",
+      "forceSpellCheck"
+    ],
+    "events": [
+      "invalid",
+      "animationcancel",
+      "animationend",
+      "animationiteration",
+      "animationstart",
+      "beforeinput",
+      "input",
+      "gotpointercapture",
+      "lostpointercapture",
+      "pointercancel",
+      "pointerdown",
+      "pointerenter",
+      "pointerleave",
+      "pointermove",
+      "pointerout",
+      "pointerover",
+      "pointerup",
+      "transitioncencel",
+      "transitionend",
+      "transitionrun",
+      "transitionstart"
+    ]
+  },
+  "Image": {
+    "extends": "HTMLElement",
+    "hasConstructor": true,
+    "readonlyProperties": [
+      "complete",
+      "currentSrc",
+      "naturalHeight",
+      "naturalWidth",
+      "x",
+      "y"
+    ],
+    "properties": [
+      "alt",
+      "crossOrigin",
+      "decoding",
+      "height",
+      "isMap",
+      "src"
+    ],
+    "methods": [
+      "decode"
+    ],
+    "events": [
+      "load"
+    ]
+  }
+}
