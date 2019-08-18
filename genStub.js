@@ -16,10 +16,21 @@ function genClass(className, classDesc) {
     return ''
   }
 
+  function staticMethodsDesc() {
+    function staticMethodDesc(methodName) {
+      return `  static ${methodName}() {
+    console.error("UNIMPLEMENTED: ${className}.${methodName}()", [...arguments])
+  }`
+    }
+    return (classDesc.staticMethods || [])
+      .reduce((acc, val) => acc.concat(staticMethodDesc(val)), [])
+      .join('\n')
+  }
+
   function methodsDesc() {
     function methodDesc(methodName) {
       return `  ${methodName}() {
-    console.error("UNIMPLEMENTED: ${className}.${methodName}()", [...arguments])
+    console.error("UNIMPLEMENTED: ${className}#${methodName}()", [...arguments])
   }`
     }
     return (classDesc.methods || [])
@@ -29,13 +40,13 @@ function genClass(className, classDesc) {
 
   function getterDesc(propertyName) {
     return `  get ${propertyName}() {
-    console.error("UNIMPLEMENTED: get ${className}.${propertyName}", [...arguments])
+    console.error("UNIMPLEMENTED: get ${className}#${propertyName}", [...arguments])
   }`
   }
 
   function setterDesc(propertyName) {
     return `  set ${propertyName}(val) {
-    console.error("UNIMPLEMENTED: set ${className}.${propertyName}", [...arguments])
+    console.error("UNIMPLEMENTED: set ${className}#${propertyName}", [...arguments])
   }`
   }
 
@@ -60,8 +71,18 @@ function genClass(className, classDesc) {
       .join('\n')
   }
 
-  return `export class ${className} ${extendsDesc()}{
+  function importDesc() {
+    if (classDesc.extends) {
+      return `import ${classDesc.extends} from './${classDesc.extends}'`
+    }
+    return ''
+  }
+
+  return `${importDesc()}
+
+export default class ${className} ${extendsDesc()}{
 ${constructorDesc()}
+${staticMethodsDesc()}
 ${methodsDesc()}
 ${readonlyPropertiesDesc()}
 ${propertiesDesc()}
@@ -72,9 +93,6 @@ ${eventHandlersDesc()}
 
 const desc = JSON.parse(fs.readFileSync('./webapi.json'))
 
-let res = []
 for (let className in desc) {
-  res = res.concat(genClass(className, desc[className]))
-  // fs.writeFileSync(`output/${className}.js`, genClass(className, desc[className]))
+  fs.writeFileSync(`output/${className}.js`, genClass(className, desc[className]))
 }
-fs.writeFileSync('output/webapi.js', res.join('\n'))
