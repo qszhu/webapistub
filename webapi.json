@@ -4,7 +4,9 @@
     "methods": [
       "addEventListener",
       "removeEventListener",
-      "dispatchEvent"
+      "dispatchEvent",
+      "setEventHandler",
+      "getEventHandler"
     ]
   },
   "Node": {
@@ -21,11 +23,17 @@
       "ownerDocument",
       "parentNode",
       "parentElement",
-      "previousSibling"
+      "previousSibling",
+      "localName",
+      "namespaceURI",
+      "prefix",
+      "rootNode"
     ],
     "properties": [
       "nodeValue",
-      "textContent"
+      "textContent",
+      "baseURIObject",
+      "nodePrincipal"
     ],
     "methods": [
       "appendChild",
@@ -42,7 +50,12 @@
       "lookupNamespaceURI",
       "normalize",
       "removeChild",
-      "replaceChild"
+      "replaceChild",
+      "getFeature",
+      "getUserData",
+      "hasAttributes",
+      "isSupported",
+      "setUserData"
     ]
   },
   "Document": {
@@ -66,7 +79,7 @@
       "preferredStleSheetSet",
       "scripts",
       "scrollingElement",
-      "styleSheetSet",
+      "styleSheetSets",
       "timeline",
       "visibilityState",
       "childElementCount",
@@ -82,7 +95,16 @@
       "URL",
       "activeElement",
       "fullscreenElement",
-      "styleSheets"
+      "styleSheets",
+      "all",
+      "compatMode",
+      "contentType",
+      "featurePolicy",
+      "undoManager",
+      "pointerLockElement",
+      "applets",
+      "charset",
+      "inputEncoding"
     ],
     "properties": [
       "body",
@@ -91,11 +113,35 @@
       "cookie",
       "designMode",
       "domain",
-      "title"
+      "title",
+      "mozSyntheticDocument",
+      "alinkColor",
+      "all",
+      "bgColor",
+      "domConfig",
+      "fgColor",
+      "fullscreen",
+      "height",
+      "linkColor",
+      "vlinkColor",
+      "width",
+      "xmlEncoding",
+      "xmlStandalone",
+      "xmlVersion",
+      "currentScript",
+      "documentURIObject",
+      "popupNode",
+      "tooltipNode",
+      "execCommandShowHelp",
+      "getBoxObjectFor",
+      "loadOverlay",
+      "queryCommandText",
+      "fileSize",
+      "contains"
     ],
     "events": [
       "fullscreenchange",
-      "fullscreennnerror",
+      "fullscreenerror",
       "readystatechange",
       "visibilitychange",
       "abort",
@@ -187,7 +233,12 @@
       "touchcancel",
       "touchend",
       "touchmove",
-      "touchstart"
+      "touchstart",
+      "afterscriptexecute",
+      "beforescriptexecute",
+      "auxclick",
+      "mousewheel",
+      "sort"
     ],
     "methods": [
       "adoptNode",
@@ -233,7 +284,19 @@
       "getSelection",
       "elementFromPoint",
       "elementsFromPoint",
-      "caretPositionFromPoint"
+      "caretPositionFromPoint",
+      "captureEvents",
+      "caretRangeFromPoint",
+      "createEntityReference",
+      "createTouch",
+      "exitPointerLock",
+      "getAnimations",
+      "normalizeDocument",
+      "releaseCapture",
+      "releaseEvents",
+      "routeEvent",
+      "mozSetImageElement",
+      "clear"
     ]
   },
   "Element": {
@@ -251,16 +314,27 @@
       "prefix",
       "previousElementSibling",
       "scrollHeight",
+      "scrollLeftMax",
+      "scrollTopMax",
       "scrollWidth",
       "shadowRoot",
-      "tagName"
+      "openOrClosedShadowRoot",
+      "tagName",
+      "computedName",
+      "computedRole",
+      "undoManager",
+      "assignedSlot"
     ],
     "properties": [
       "className",
       "id",
       "innerHTML",
+      "outerHTML",
       "scrollLeft",
-      "scrollTop"
+      "scrollTop",
+      "slot",
+      "tabStop",
+      "undoScope"
     ],
     "methods": [
       "attachShadow",
@@ -290,7 +364,24 @@
       "setAttribute",
       "setAttributeNS",
       "setPointerCapture",
-      "toggleAttribute"
+      "toggleAttribute",
+      "animate",
+      "closest",
+      "createShadowRoot",
+      "computedStyleMap",
+      "getAnimations",
+      "getAttributeNode",
+      "getAttributeNodeNS",
+      "matches",
+      "pseudo",
+      "remove",
+      "removeAttributeNode",
+      "requestFullscreen",
+      "requestPointerLock",
+      "scrollIntoView",
+      "setAttributeNode",
+      "setAttributeNodeNS",
+      "setCapture"
     ],
     "events": [
       "cancel",
@@ -328,7 +419,12 @@
       "touchmove",
       "touchstart",
       "fullscreenchange",
-      "fullscreennnerror"
+      "fullscreenerror",
+      "DOMActivate",
+      "webkitmouseforcechanged",
+      "webkitmouseforcedown",
+      "webkitmouseforcewillbegin",
+      "webkitmouseforceup"
     ]
   },
   "HTMLElement": {
@@ -337,7 +433,16 @@
       "accessKeyLabel",
       "isContentEditable",
       "dataset",
-      "dropzone"
+      "dropzone",
+      "itemType",
+      "itemRef",
+      "itemProp",
+      "offsetHeight",
+      "offsetLeft",
+      "offsetParent",
+      "offsetTop",
+      "offsetWidth",
+      "properties"
     ],
     "properties": [
       "accessKey",
@@ -353,7 +458,12 @@
       "spellcheck",
       "style",
       "tabIndex",
-      "title"
+      "title",
+      "contextMenu",
+      "itemScope",
+      "itemId",
+      "itemValue",
+      "translate"
     ],
     "methods": [
       "blur",
@@ -382,7 +492,16 @@
       "transitioncencel",
       "transitionend",
       "transitionrun",
-      "transitionstart"
+      "transitionstart",
+      "copy",
+      "cut",
+      "paste",
+      "touchstart",
+      "touchend",
+      "touchmove",
+      "touchenter",
+      "touchleave",
+      "touchcancel"
     ]
   },
   "HTMLImageElement": {
@@ -402,7 +521,19 @@
       "decoding",
       "height",
       "isMap",
-      "src"
+      "src",
+      "align",
+      "border",
+      "hspace",
+      "longDesc",
+      "lowSrc",
+      "name",
+      "referrerPolicy",
+      "sizes",
+      "srcset",
+      "useMap",
+      "vspace",
+      "width"
     ],
     "methods": [
       "decode"
@@ -415,12 +546,17 @@
     "extends": "HTMLElement",
     "properties": [
       "height",
-      "width"
+      "width",
+      "mozOpaque",
+      "mozPrintCallback"
     ],
     "methods": [
+      "captureStream",
       "getContext",
       "toDataURL",
-      "toBlob"
+      "toBlob",
+      "transferControlToOffscreen",
+      "mozGetAsFile"
     ],
     "events": [
       "webglcontextcreationerror",
@@ -444,7 +580,13 @@
       "seekable",
       "seeking",
       "textTracks",
-      "videoTracks"
+      "videoTracks",
+      "mediaKeys",
+      "mozAudioCaptured",
+      "mozSampleRate",
+      "sinkId",
+      "initialTime",
+      "mozChannels"
     ],
     "properties": [
       "audioTracks",
@@ -467,7 +609,10 @@
       "preload",
       "src",
       "srcObject",
-      "volume"
+      "volume",
+      "mozFragmentEnd",
+      "mozFrameBufferLength",
+      "preservesPitch"
     ],
     "events": [
       "encrypted",
@@ -493,7 +638,9 @@
       "suspend",
       "timeupdate",
       "volumechange",
-      "waiting"
+      "waiting",
+      "mozinterruptbegin",
+      "mozinterrupteend"
     ],
     "methods": [
       "addTextTrack",
@@ -501,19 +648,42 @@
       "fastSeek",
       "load",
       "pause",
-      "play"
+      "play",
+      "captureStream",
+      "mozCaptureStream",
+      "mozCaptureStreamUntilEnded",
+      "mozGetMetadata",
+      "seekToNextFrame",
+      "setMediaKes",
+      "setSinkId",
+      "mozLoadFrom"
     ]
   },
   "HTMLVideoElement": {
     "extends": "HTMLMediaElement",
     "readonlyProperties": [
       "videoHeight",
-      "videoWidth"
+      "videoWidth",
+      "mozParsedFrames",
+      "mozDecodedFrames",
+      "mozPresentedFrames",
+      "mozPaintedFrames",
+      "mozFrameDelay",
+      "mozHasAudio",
+      "msIsLayoutOptimalForPlaback",
+      "msIsStereo3D"
     ],
     "properties": [
       "height",
       "poster",
-      "width"
+      "width",
+      "msZoom"
+    ],
+    "methods": [
+      "msFrameStep",
+      "msHorizontalMirror",
+      "msInsertVideoEffect",
+      "getVideoPlaybackQuality"
     ]
   },
   "HTMLScriptElement": {
@@ -526,7 +696,9 @@
       "defer",
       "text",
       "noModule",
-      "referrerPolicy"
+      "referrerPolicy",
+      "event",
+      "crossOrigin"
     ]
   },
   "Blob": {
@@ -605,7 +777,7 @@
       "scrollY",
       "self",
       "speechSynthesis",
-      "statusBar",
+      "statusbar",
       "toolbar",
       "top",
       "visualViewport",
@@ -614,7 +786,29 @@
       "indexedDB",
       "isSecureContext",
       "origin",
-      "devicePixelRatio"
+      "devicePixelRatio",
+      "closed",
+      "content",
+      "_content",
+      "controllers",
+      "defaultStatus",
+      "DOMMatrix",
+      "DOMMatrixReadOnly",
+      "DOMPoint",
+      "DOMPointReadOnly",
+      "DOMQuad",
+      "DOMRect",
+      "DomRectReadOnly",
+      "globalStorage",
+      "isSecureContext",
+      "mozAnimationStartTime",
+      "mozInnerScreenX",
+      "mozInnerScreenY",
+      "mozPaintCount",
+      "orientation",
+      "scrollMaxX",
+      "scrollMaxY",
+      "sidebar"
     ],
     "properties": [
       "fullscreen",
@@ -623,7 +817,10 @@
       "opener",
       "returnValue",
       "sessionStorage",
-      "status"
+      "status",
+      "directories",
+      "pkcs11",
+      "returnValue"
     ],
     "methods": [
       "alert",
@@ -661,7 +858,30 @@
       "createImageBitmap",
       "fetch",
       "setInterval",
-      "setTimeout"
+      "setTimeout",
+      "back",
+      "cancelAnimationFrame",
+      "cancelIdleCallback",
+      "captureEvents",
+      "disableExternalCapture",
+      "dump",
+      "enableExternalCapture",
+      "forward",
+      "getAttention",
+      "getDefaultComputedStyle",
+      "home",
+      "openDialog",
+      "releaseEvents",
+      "requestIdleCallback",
+      "restore",
+      "routeEvent",
+      "scrollByLines",
+      "scrollByPages",
+      "setCursor",
+      "setResizable",
+      "sizeToContent",
+      "updateCommands",
+      "showModalDialog"
     ],
     "events": [
       "appinstalled",
@@ -743,7 +963,9 @@
       "transitionrun",
       "transitionstart",
       "vrdisplaypointerrestricted",
-      "vrdisplaypointerunrestricted"
+      "vrdisplaypointerunrestricted",
+      "deviceorientationabsolute",
+      "mozbeforepaint"
     ]
   },
   "Navigator": {
@@ -758,11 +980,54 @@
       "onLine",
       "serviceWorker",
       "storage",
-      "userAgent"
+      "userAgent",
+      "activeVRDisplays",
+      "appCodeName",
+      "appName",
+      "appVersion",
+      "connection",
+      "javaEnabled",
+      "keyboard",
+      "locks",
+      "mediaCapabilities",
+      "mimeTypes",
+      "permissions",
+      "platform",
+      "plugins",
+      "product",
+      "webdriver",
+      "buildID",
+      "credentials",
+      "deviceMemory",
+      "doNotTrack",
+      "mediaDevices",
+      "mozNotification",
+      "webkitNotification",
+      "mozSocial",
+      "oscpu",
+      "presentation",
+      "productSub",
+      "securitypolicy",
+      "standalone",
+      "storageQuota",
+      "vendor",
+      "vendorSub",
+      "webkitPointer"
     ],
     "methods": [
       "registerProtocolHandler",
-      "vibrate"
+      "vibrate",
+      "canShare",
+      "getVRDisplays",
+      "getUserMedia",
+      "registerContentHandler",
+      "requestMediaKeySystemAccess",
+      "sendBeacon",
+      "share",
+      "taintEnabled",
+      "vibrate",
+      "mozIsLocallyAvailable",
+      "mozPay"
     ]
   }
 }
