@@ -881,7 +881,10 @@
       "setResizable",
       "sizeToContent",
       "updateCommands",
-      "showModalDialog"
+      "showModalDialog",
+      "addEventListener",
+      "removeEventListener",
+      "dispatchEvent"
     ],
     "events": [
       "appinstalled",
