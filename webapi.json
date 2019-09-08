@@ -701,6 +701,12 @@
       "crossOrigin"
     ]
   },
+  "HTMLHeadElement": {
+    "extends": "HTMLElement",
+    "properties": [
+      "profile"
+    ]
+  },
   "Blob": {
     "hasConstructor": true,
     "readonlyProperties": [
