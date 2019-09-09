@@ -1038,5 +1038,76 @@
       "mozIsLocallyAvailable",
       "mozPay"
     ]
+  },
+  "Event": {
+    "hasConstructor": true,
+    "readonlyProperties": [
+      "bubbles",
+      "cancelable",
+      "composed",
+      "currentTarget",
+      "defaultPrevented",
+      "eventPhase",
+      "explicitOriginalTarget",
+      "origintalTarget",
+      "target",
+      "timestamp",
+      "type",
+      "isTrusted",
+      "scoped"
+    ],
+    "properties": [
+      "cancelBubble",
+      "deepPath",
+      "returnValue",
+      "srcElement"
+    ],
+    "methods": [
+      "createEvent",
+      "composedPath",
+      "initEvent",
+      "preventDefault",
+      "stopImmediatePropagation",
+      "stopPropagation",
+      "getPreventDefault",
+      "preventBubble",
+      "preventCapture"
+    ]
+  },
+  "UIEvent": {
+    "hasContructor": true,
+    "extends": "Event",
+    "readonlyProperties": [
+      "detail",
+      "isChar",
+      "layerX",
+      "layerY",
+      "pageX",
+      "pageY",
+      "sourceCapabilities",
+      "view",
+      "which"
+    ],
+    "properties": [
+      "cancelBubble"
+    ],
+    "methods": [
+      "initUIEvent"
+    ]
+  },
+  "TouchEvent": {
+    "hasConstructor": true,
+    "extends": "UIEvent",
+    "readonlyProperties": [
+      "altKey",
+      "changedTouches",
+      "ctrlKey",
+      "metaKey",
+      "shiftKey",
+      "targetTouches",
+      "touches",
+      "rotation",
+      "scale"
+    ]
   }
 }
