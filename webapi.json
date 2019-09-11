@@ -1109,5 +1109,8 @@
       "rotation",
       "scale"
     ]
+  },
+  "HTMLAudioElement": {
+    "extends": "HTMLMediaElement"
   }
 }
